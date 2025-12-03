@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Settings, Calculator, Clock, CheckCircle } from 'lucide-react';
 
 const DEFAULTS = {
@@ -21,7 +21,6 @@ const VIEWS = {
 const App = () => {
   // Estados para Configurações
   const [materialCost, setMaterialCost] = useState(DEFAULTS.materialCost);
-  const [printSpeed, setPrintSpeed] = useState(DEFAULTS.printSpeed);
   const [hourlyRate, setHourlyRate] = useState(DEFAULTS.hourlyRate);
   const [powerCost, setPowerCost] = useState(DEFAULTS.powerCost);
   const [printerPower, setPrinterPower] = useState(DEFAULTS.printerPower); 
@@ -142,7 +141,6 @@ const App = () => {
   // Função para redefinir todas as configurações e valores de cálculo
   const resetAll = () => {
     setMaterialCost(DEFAULTS.materialCost);
-    setPrintSpeed(DEFAULTS.printSpeed);
     setHourlyRate(DEFAULTS.hourlyRate);
     setPowerCost(DEFAULTS.powerCost);
     setPrinterPower(DEFAULTS.printerPower);
